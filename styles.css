@@ -1,0 +1,623 @@
+/* Resetear estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+
+
+
+/* Estilos del encabezado */
+header {
+    background-color: #012A48;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex; /* Alinea las cajas del logo y la barra de navegación horizontalmente */
+    justify-content: space-between; /* Coloca las cajas en los extremos: logo a la izquierda y nav a la derecha */
+    align-items: center; /* Alinea verticalmente el contenido dentro de cada caja */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    flex: 0 0 auto; /* La caja del logo toma el espacio que necesita sin crecer */
+}
+
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según tu necesidad */
+    height: auto;
+}
+
+.navbar {
+    flex: 1; /* La barra de navegación toma el espacio restante */
+    text-align: right; /* Alinea el contenido de la barra de navegación a la derecha */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los ítems del menú en una fila */
+    justify-content: flex-end; /* Alinea los ítems a la derecha */
+}
+
+.navbar ul li {
+    margin-left: 20px; /* Espacio entre los ítems del menú */
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Alinea en columna para pantallas pequeñas */
+        align-items: center;
+    }
+
+    .logo img {
+        width: 60px; /* Tamaño ajustado para dispositivos pequeños */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Los ítems del menú se apilan verticalmente */
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Sección principal con el eslogan */
+.main-section {
+    background-color: #00B3FE;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.eslogan img {
+    width: 100%;
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Ensures there’s no extra space around the image */
+    margin: 0 auto; /* Centers the image horizontally, if needed */
+}
+
+
+/* Estilos para la sección "¿Qué ofrecemos?" */
+.que-ofrecemos {
+    background-color: #003366;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Alinea las cajas al inicio, por si el contenido es más largo en una caja */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-box {
+    flex: 1; /* La caja de texto toma el espacio necesario */
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente si es más pequeño */
+    flex-grow: 1; /* Permite que la caja crezca si es necesario */
+    min-height: 100%; /* Hace que la caja de texto tenga la misma altura que la de imágenes */
+}
+
+.text-box h2 {
+    color: #FFBA44;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño de texto adaptable */
+}
+
+.text-box p, .text-box ul {
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+    line-height: 1.5;
+    color: #fff;
+}
+.text-box p {
+    margin-bottom: 20px;    
+}
+.text-box strong {
+    color: #FFBA44;
+}
+.text-box ul li {
+    margin-bottom: 20px;
+    color: #fff
+}
+
+.image-box {
+    flex: 1; /* Toma el mismo espacio que la caja de texto */
+    display: flex;
+    flex-direction: column; /* Alinea las imágenes verticalmente */
+    justify-content: space-between;
+}
+
+.image-box img {
+    width: 100%; /* Las imágenes ocupan el 100% de su contenedor */
+    height: auto;
+    object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+    max-height: 40vh; /* Máxima altura de cada imagen, 50% del viewport */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Alinea las cajas en columna para pantallas pequeñas */
+    }
+
+    .text-box {
+        padding-right: 0;
+        margin-bottom: 20px; /* Añade un espacio entre el texto y las imágenes */
+    }
+
+    .image-box img {
+        max-height: 30vh; /* Reduce la altura máxima de las imágenes en móviles */
+    }
+}
+
+/* Estilos para la sección "¿Qué Hacemos?" */
+.que-hacemos {
+    background: linear-gradient(to right, #fff 50%, #003366 50%);
+    padding: 40px 20px;
+    border-top: 2px solid black;   /* Línea negra en la parte superior */
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Alinea las cajas para que ocupen el mismo alto */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-box2 {
+    flex: 1; /* Hace que la caja de imágenes ocupe la mitad de la pantalla */
+    display: flex;
+    flex-direction: column; /* Coloca las imágenes verticalmente */
+    justify-content: space-between; /* Distribuye las imágenes uniformemente */
+    background-color: white; /* Fondo blanco en el lado izquierdo */
+    border-right: 3px solid black; /* Línea divisoria negra */
+}
+
+.image-box2 h2 {
+    color: #FFBA44;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño de texto adaptable */
+}
+
+.image-box2 img {
+    width: 80%; /* Las imágenes ocupan el 100% de su contenedor */
+    height: auto;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    max-height: 30vh; /* Controla la altura máxima de las imágenes */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.text-box2 {
+    flex: 1; /* La caja de texto toma el espacio necesario */
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente */
+    flex-grow: 1; /* Permite que la caja crezca si es necesario */
+    color: #fff;
+    line-height: 1.5;
+    background-color: #003366; /* Fondo azul en el lado derecho */
+}
+
+.text-box2 p, .text-box2 ul {
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+    margin-bottom: 30px;
+
+}
+
+.text-box2 strong {
+    color: #FFBA44; /* Resalta los títulos */
+}
+
+.text-box2 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-box2 ul li {
+    margin-bottom: 80px;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apila las cajas verticalmente en pantallas pequeñas */
+    }
+
+    .image-box img {
+        max-height: 25vh; /* Ajusta la altura máxima de las imágenes en móviles */
+        border-right: none; /* Elimina la línea divisoria en pantallas pequeñas */
+    }
+
+    .text-box {
+        padding-left: 0;
+        margin-top: 20px; /* Añade espacio entre las cajas en dispositivos móviles */
+    }
+}
+
+/* Estilos para la sección de la plataforma */
+.plataforma {
+    background-color: white;
+    padding: 40px 20px;
+    border-top: 2px solid black;   /* Línea negra en la parte superior */
+    border-bottom: 2px solid black; /* Línea negra en la parte inferior */  
+}
+
+.plataforma .container3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.plataforma h2 {
+    color: #0091EA;
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño adaptable */
+    flex-basis: 25%;
+    margin-right: 20px;
+}
+
+.plataforma-list {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plataforma-list li {
+    flex-basis: 30%;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* Tamaño adaptable */
+    line-height: 1.5;
+    color: #003366;
+}
+
+/* Estilos para la sección de Blog */
+.blog {
+    background-color: #003366;
+    padding: 40px 20px;
+}
+
+.blog .container4 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.blog-header {
+    margin-bottom: 30px;
+}
+
+.blog-header h2 {
+    color: #FFBA44;
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño adaptable */
+    margin-bottom: 20px;
+}
+
+.blog-header p {
+    font-size: clamp(1rem, 1.5vw, 1.5rem); /* Tamaño adaptable */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.blog-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-list strong {
+    color: #FFBA44;
+}
+.blog-list li {
+    flex-basis: 22%;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* Tamaño adaptable */
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .plataforma .container,
+    .blog .container {
+        flex-direction: column;
+    }
+
+    .plataforma h2 {
+        margin-bottom: 20px;
+    }
+
+    .plataforma-list,
+    .blog-list {
+        flex-direction: column;
+    }
+
+    .plataforma-list li,
+    .blog-list li {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Sección de pasos para el entrenamiento al personal */
+.training-steps {
+    background-color: #003366;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.image-row img {
+    width: 120px; /* Ancho de las imágenes */
+    height: 120px; /* Alto de las imágenes */
+    border-radius: 50%; /* Hacer las imágenes circulares */
+    object-fit: cover;
+    margin: 0 10px; /* Espacio entre las imágenes */
+}
+
+/* Lista de pasos enumerados */
+.steps-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.steps-list strong { 
+    color: #00B3FE;
+}
+
+.steps-list li {
+    flex-basis: 18%; /* Cada paso ocupa un 18% del ancho disponible */
+    text-align: left;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* Tamaño de texto adaptable */
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Estilos para el texto */
+.steps-list strong {
+    color: #00B1E5;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .image-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-row img {
+        margin-bottom: 20px;
+    }
+
+    .steps-list {
+        flex-direction: column;
+    }
+
+    .steps-list li {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contenedor principal de la sección */
+.talleres-costos {
+    background-color: #ffffff;
+    padding: 40px 20px;
+}
+
+/* Contenedor interno para organizar las columnas */
+.talleres-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Para apilar en pantallas pequeñas */
+}
+
+/* Columna izquierda: Talleres y Suscripciones */
+.talleres-column {
+    background-color: #ffffff; /* Fondo azul claro */
+    flex: 1; /* Ocupa el mismo espacio que la columna de costos */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.talleres-column h2 {
+    color: #009fe3;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño de texto adaptable */
+    font-weight: bold;
+}
+
+.talleres-column p,
+.talleres-column ul {
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+    line-height: 1.5;
+    color: #333;
+}
+
+.talleres-column ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.talleres-column li {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.talleres-column strong {
+    color: #009fe3;
+}
+
+.talleres-column .blue-link {
+    color: #009fe3;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+}
+
+.talleres-column .blue-link:hover {
+    text-decoration: underline;
+}
+
+/* Columna derecha: Costos */
+.costos-column {
+    background-color: #002744; /* Fondo azul oscuro */
+    color: #fff; /* Texto blanco */
+    flex: 1; /* Ocupa el mismo espacio que la columna de talleres */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.costos-column h2 {
+    color: #ffae00;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño de texto adaptable */
+    font-weight: bold;
+}
+
+.costos-column p,
+.costos-column ul {
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+    line-height: 1.5;
+    color: #fff;
+}
+
+.costos-column ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.costos-column li {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .talleres-container {
+        flex-direction: column;
+    }
+
+    .talleres-column,
+    .costos-column {
+        margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+}
+
+.footer {
+    background-color: #002744; /* Fondo azul oscuro */
+    padding: 40px 20px;
+    color: #fff; /* Texto blanco */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centra el contenido */
+}
+
+.footer h2 {
+    color: #FFBA44; /* Color similar al título de la sección */
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño de texto adaptable */
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer h2 {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .footer-list li {
+        font-size: clamp(0.9rem, 2.5vw, 1.8rem);
+    }
+}

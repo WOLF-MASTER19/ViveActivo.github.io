@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #012A48;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex; /* Alinea las cajas del logo y la barra de navegación horizontalmente */
+    justify-content: space-between; /* Coloca las cajas en los extremos: logo a la izquierda y nav a la derecha */
+    align-items: center; /* Alinea verticalmente el contenido dentro de cada caja */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    flex: 0 0 auto; /* La caja del logo toma el espacio que necesita sin crecer */
+}
+
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según tu necesidad */
+    height: auto;
+}
+
+.navbar {
+    flex: 1; /* La barra de navegación toma el espacio restante */
+    text-align: right; /* Alinea el contenido de la barra de navegación a la derecha */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los ítems del menú en una fila */
+    justify-content: flex-end; /* Alinea los ítems a la derecha */
+}
+
+.navbar ul li {
+    margin-left: 20px; /* Espacio entre los ítems del menú */
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Alinea en columna para pantallas pequeñas */
+        align-items: center;
+    }
+
+    .logo img {
+        width: 60px; /* Tamaño ajustado para dispositivos pequeños */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Los ítems del menú se apilan verticalmente */
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Estilo para el título */
+.faq-title {
+    font-size: 2.5rem;
+    color: #00B1E5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Introducción a la sección de preguntas */
+.faq-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Lista de preguntas frecuentes */
+.faq-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-list li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+/* Estilo para cada pregunta */
+.faq-item {
+    margin-bottom: 40px;
+    border-top: 1px solid #FFD700;
+    border-bottom: 1px solid #FFD700;
+    padding: 20px 0;
+}
+
+.faq-item h3 {
+    font-size: 1.8rem;
+    color: #00B1E5;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las listas de pasos */
+.faq-steps {
+    list-style-type: none;
+    padding: 0;
+}
+
+.faq-steps li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 2rem;
+    }
+
+    .faq-intro {
+        font-size: 1rem;
+    }
+
+    .faq-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .faq-steps li {
+        font-size: 0.9rem;
+    }
+}
+
+.footer {
+    background-color: #002744; /* Fondo azul oscuro */
+    padding: 40px 20px;
+    color: #fff; /* Texto blanco */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centra el contenido */
+}
+
+.footer h2 {
+    color: #FFBA44; /* Color similar al título de la sección */
+    font-size: clamp(1.8rem, 2vw, 3rem); /* Tamaño de texto adaptable */
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    font-size: clamp(1rem, 1.5vw, 2rem); /* Tamaño de texto adaptable */
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer h2 {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .footer-list li {
+        font-size: clamp(0.9rem, 2.5vw, 1.8rem);
+    }
+}
